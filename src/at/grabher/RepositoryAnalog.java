@@ -12,17 +12,19 @@ public class RepositoryAnalog implements Records {
 
 
     //methods
+    public void printList() {
+        for (int i = 0; i < recordVinyls.size(); i++) {
+            System.out.print(recordVinyls.get(i).getRecordName());
+            System.out.print(" at position: ");
+            System.out.println(recordVinyls.get(i).getRecordID());
+        }
+
+    }
     public void addRecord(int input, MusicBox musicBox) {
-        //if (recordVinyls.add(input) != null) {
 
-        //musicBox.getRecordsList().
         recordVinyls.add((RecordVinyl) musicBox.getRecordsList().get(input));
-        System.out.println(recordVinyls.get(input).getRecordName() + "is added to the repository");
+        System.out.println(recordVinyls.get(input).getRecordName() + " is added to the repository");
 
-
-        //} else {
-        //System.out.println("no record found to add!");  //error
-        //}
     }
 
     public void loadRecord(int input) {

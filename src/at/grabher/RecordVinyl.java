@@ -23,8 +23,6 @@ public class RecordVinyl implements Records{
 
 
 
-
-
     //get set
 
     public String getRecordName() {

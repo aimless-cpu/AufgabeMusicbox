@@ -19,11 +19,13 @@ public class ConsoleGUI implements GUI{
 
         RepositoryAnalog repositoryAnalog = new RepositoryAnalog();
 
+        System.out.println("choose a record to add");
+        musicBox.printList();
         input = scanner.nextInt();
         repositoryAnalog.addRecord(input,musicBox);
 
-        repositoryAnalog.playRecord();
-
+        System.out.println("choose a record to load");
+        repositoryAnalog.printList();
         input = scanner.nextInt();
         repositoryAnalog.loadRecord(input);
 
