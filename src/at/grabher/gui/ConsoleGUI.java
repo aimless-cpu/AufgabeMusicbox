@@ -20,7 +20,7 @@ public class ConsoleGUI implements GUI{
         RepositoryAnalog repositoryAnalog = new RepositoryAnalog();
 
         input = scanner.nextInt();
-        repositoryAnalog.addRecord(input);
+        repositoryAnalog.addRecord(input,musicBox);
 
         repositoryAnalog.playRecord();
 
@@ -29,7 +29,6 @@ public class ConsoleGUI implements GUI{
 
         repositoryAnalog.playRecord();
     }
-
 
 
     @Override

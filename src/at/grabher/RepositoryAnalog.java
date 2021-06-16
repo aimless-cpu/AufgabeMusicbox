@@ -1,20 +1,27 @@
 package at.grabher;
 
+import at.grabher.loader.LoaderDummy;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepositoryAnalog implements RecordInterface{
+public class RepositoryAnalog implements Records {
     private List<RecordVinyl> recordVinyls = new ArrayList<>();
 
     RecordVinyl recordToLoad;
 
 
     //methods
-    public void addRecord(int input) {
+    public void addRecord(int input, MusicBox musicBox) {
         //if (recordVinyls.add(input) != null) {
-        recordVinyls.add(recordVinyls.add(input));
+
+        //musicBox.getRecordsList().
+        recordVinyls.add((RecordVinyl) musicBox.getRecordsList().get(input));
+        System.out.println(recordVinyls.get(input).getRecordName() + "is added to the repository");
+
+
         //} else {
-        System.out.println("no record found to add!");  //error
+        //System.out.println("no record found to add!");  //error
         //}
     }
 

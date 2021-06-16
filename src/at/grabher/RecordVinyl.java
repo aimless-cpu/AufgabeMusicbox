@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class RecordVinyl {
+public class RecordVinyl implements Records{
     //instance
     private String recordName;
     private int recordID;
