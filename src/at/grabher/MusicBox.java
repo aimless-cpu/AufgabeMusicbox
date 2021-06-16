@@ -8,7 +8,10 @@ public class MusicBox {
         List<RecordVinyl> recordList;
         RecordVinyl recordToLoad;
         String searchString;
+        int input;
         Scanner scanner = new Scanner(System.in);
+
+        RepositoryAnalog repositoryAnalog = new RepositoryAnalog();
 
 
         RecordTitle recordTitle = new RecordTitle("Title Zero", 260);
@@ -19,12 +22,25 @@ public class MusicBox {
         recordZero.getRecordTitles().add(recordTitle);
         recordZero.getRecordTitles().add(recordTitle1);
 
+        repositoryAnalog.getRecordVinyls().add(recordZero);
 
-        recordZero.getRecordTitles().add(recordTitle);
+        input = scanner.nextInt();
+        recordToLoad = repositoryAnalog.getRecordVinyls().get(input);
+        repositoryAnalog.getRecordVinyls().add(recordToLoad);
 
-        recordZero.getRecordTitles();
+        System.out.println(recordToLoad.getRecordName());
 
-        System.out.println("whatever");
+
+
+
+
+
+
+
+
+
+
+
 
 
 //        RecordVinyl recordVinyl;
