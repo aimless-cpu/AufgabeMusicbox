@@ -3,31 +3,10 @@ package at.grabher;
 import java.util.*;
 
 public class MusicBox {
-    public static void main (String[]argv) {
-
-        List<RecordVinyl> recordList;
-
-        String searchString;
-        int input;
-        Scanner scanner = new Scanner(System.in);
-
-        RepositoryAnalog repositoryAnalog = new RepositoryAnalog();
 
 
-        RecordTitle recordTitle = new RecordTitle("Title Zero", 260);
-        RecordTitle recordTitle1 = new RecordTitle("Title One", 260);
 
-        RecordVinyl recordZero = new RecordVinyl("Record Zero", 0);
 
-        recordZero.getRecordTitles().add(recordTitle);
-        recordZero.getRecordTitles().add(recordTitle1);
-
-        repositoryAnalog.getRecordVinyls().add(recordZero);
-
-        input = scanner.nextInt();
-        repositoryAnalog.loadRecord(input);
-
-        repositoryAnalog.playRecord();
 
 
 
@@ -37,8 +16,6 @@ public class MusicBox {
 //
 //        List<RecordTitle> recordTitles;
 //        recordVinyl = new RecordVinyl("Record Zero", 0, recordTitles);
-
-
 
 //
 //        RecordVinyl recordVinyl = new RecordVinyl("Record Zero", 0);
@@ -56,19 +33,14 @@ public class MusicBox {
         //play record
 
         //public void loadRecord(VinylRecord recordToLoad) {
-
-
     }
-
-    private static void searchRecord(List<RecordVinyl> recordList, String searchString) {
-
-        for (int i = 0; i < recordList.size(); i++ ) {
-            if (recordList.get(i).getRecordName().matches(searchString)) {
-                System.out.print("found: ");
-                System.out.println(recordList.get(i).getRecordName() + " with the ID: " + recordList.get(i).getRecordID());
-            }
-        }
-    }
-
+//    private static void searchRecord(List<RecordVinyl> recordList, String searchString) {
+//
+//        for (int i = 0; i < recordList.size(); i++ ) {
+//            if (recordList.get(i).getRecordName().matches(searchString)) {
+//                System.out.print("found: ");
+//                System.out.println(recordList.get(i).getRecordName() + " with the ID: " + recordList.get(i).getRecordID());
+//            }
+//        }
 }
 

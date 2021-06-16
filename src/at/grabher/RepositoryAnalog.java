@@ -5,17 +5,32 @@ import java.util.List;
 
 public class RepositoryAnalog implements RecordInterface{
     private List<RecordVinyl> recordVinyls = new ArrayList<>();
+
     RecordVinyl recordToLoad;
 
 
     //methods
+    public void addRecord(int input) {
+        //if (recordVinyls.add(input) != null) {
+        recordVinyls.add(recordVinyls.add(input));
+        //} else {
+        System.out.println("no record found to add!");  //error
+        //}
+    }
+
     public void loadRecord(int input) {
-        recordToLoad = recordVinyls.get(input);
-        System.out.println(recordToLoad.getRecordName());
+
+            recordToLoad = recordVinyls.get(input);
+            System.out.println(recordToLoad.getRecordName());
+
     }
 
     public void playRecord() {
-        System.out.println("playing now: " + recordToLoad.getRecordName());
+        if (recordToLoad != null) {
+            System.out.println("playing now: " + recordToLoad.getRecordName());
+        } else {
+            System.out.println("no record loaded!");    //error
+        }
     }
 
 
