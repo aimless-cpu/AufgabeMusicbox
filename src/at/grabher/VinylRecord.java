@@ -19,6 +19,9 @@ public class VinylRecord {
     //method
 
 
+
+
+
     //get set
 
     public String getRecordName() {
