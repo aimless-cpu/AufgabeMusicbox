@@ -5,24 +5,45 @@ import java.util.*;
 public class MusicBox {
     public static void main (String[]argv) {
 
-
-        List<VinylRecord> recordList;
-        VinylRecord recordToLoad;
+        List<RecordVinyl> recordList;
+        RecordVinyl recordToLoad;
         String searchString;
         Scanner scanner = new Scanner(System.in);
-        HashMap<String, Integer> titleMap = new HashMap<>();
 
-        
-        titleMap.put("Title Zero", 120);
-        titleMap.put("Title One", 160);
 
-        VinylRecord vinylRecord = new VinylRecord("Record Zero", 0, titleMap);
+        RecordTitle recordTitle = new RecordTitle("Title Zero", 260);
+        RecordTitle recordTitle1 = new RecordTitle("Title One", 260);
 
-        recordList = new ArrayList<>();
-        recordList.add(vinylRecord);
+        RecordVinyl recordZero = new RecordVinyl("Record Zero", 0);
 
-        searchString = scanner.nextLine();
-        searchRecord(recordList, searchString);
+        recordZero.getRecordTitles().add(recordTitle);
+        recordZero.getRecordTitles().add(recordTitle1);
+
+
+        recordZero.getRecordTitles().add(recordTitle);
+
+        recordZero.getRecordTitles();
+
+        System.out.println("whatever");
+
+
+//        RecordVinyl recordVinyl;
+//
+//        recordVinyl.recordTitles.add(recordTitle);
+//
+//        List<RecordTitle> recordTitles;
+//        recordVinyl = new RecordVinyl("Record Zero", 0, recordTitles);
+
+
+
+//
+//        RecordVinyl recordVinyl = new RecordVinyl("Record Zero", 0);
+//
+//        recordList = new ArrayList<>();
+//        recordList.add(recordVinyl);
+//
+//        searchString = scanner.nextLine();
+//        searchRecord(recordList, searchString);
 
 
         //add record
@@ -35,7 +56,7 @@ public class MusicBox {
 
     }
 
-    private static void searchRecord(List<VinylRecord> recordList, String searchString) {
+    private static void searchRecord(List<RecordVinyl> recordList, String searchString) {
 
         for (int i = 0; i < recordList.size(); i++ ) {
             if (recordList.get(i).getRecordName().matches(searchString)) {

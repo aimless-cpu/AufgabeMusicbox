@@ -1,23 +1,25 @@
 package at.grabher;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
-public class VinylRecord {
+public class RecordVinyl {
     //instance
     private String recordName;
     private int recordID;
-    private Map<String, Integer> titleMap;
+    private List<RecordTitle> recordTitles = new ArrayList<>();
+
 
     //constructor
 
-    public VinylRecord(String recordName, int recordID, Map<String, Integer> titleMap) {
+    public RecordVinyl(String recordName, int recordID) {
         this.recordName = recordName;
         this.recordID = recordID;
-        this.titleMap = titleMap;
     }
 
-    //method
 
+    //method
 
 
 
@@ -40,11 +42,12 @@ public class VinylRecord {
         this.recordID = recordID;
     }
 
-    public Map<String, Integer> getTitleMap() {
-        return titleMap;
+    public List<RecordTitle> getRecordTitles() {
+        return recordTitles;
     }
 
-    public void setTitleMap(Map<String, Integer> titleMap) {
-        this.titleMap = titleMap;
+    public void setRecordTitles(List<RecordTitle> recordTitles) {
+        this.recordTitles = recordTitles;
     }
+
 }
