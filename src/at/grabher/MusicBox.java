@@ -6,7 +6,7 @@ public class MusicBox {
     public static void main (String[]argv) {
 
         List<RecordVinyl> recordList;
-        RecordVinyl recordToLoad;
+
         String searchString;
         int input;
         Scanner scanner = new Scanner(System.in);
@@ -25,21 +25,9 @@ public class MusicBox {
         repositoryAnalog.getRecordVinyls().add(recordZero);
 
         input = scanner.nextInt();
-        recordToLoad = repositoryAnalog.getRecordVinyls().get(input);
-        repositoryAnalog.getRecordVinyls().add(recordToLoad);
+        repositoryAnalog.loadRecord(input);
 
-        System.out.println(recordToLoad.getRecordName());
-
-
-
-
-
-
-
-
-
-
-
+        repositoryAnalog.playRecord();
 
 
 
